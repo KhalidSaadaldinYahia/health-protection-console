@@ -44,10 +44,12 @@ Source pages:
 
 ## How to open
 
-1. Download `Health_Protection_Console_PBIP.zip`.
+1. [Download the Power BI project archive](Health_Protection_Console_Power_BI_Project.rar).
 2. Extract the archive.
 3. Open `HealthProtectionConsole.pbip` in Power BI Desktop.
 4. If the extracted folder is moved, update the included CSV path in Power Query and refresh.
+
+Preview the completed dashboard: [open the PDF](Health_Protection_Console_Dashboard.pdf).
 
 ## Technical features
 
