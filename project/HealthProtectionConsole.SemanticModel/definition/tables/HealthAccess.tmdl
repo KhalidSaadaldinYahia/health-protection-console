@@ -98,7 +98,7 @@ table HealthAccess
 		mode: import
 		source =
 				let
-					Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/KhalidSaadaldinYahia/health-protection-console/main/project/data/health_access.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/KhalidSaadaldinYahia/health-protection-console/18313664b769d22530c3e00045ea2eaae97b94ec/project/data/health_access.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 					Typed = Table.TransformColumnTypes(Headers, {{"Country", type text}, {"Code", type text}, {"Year", Int64.Type}, {"OOP", type number}, {"UHC", type number}, {"Region", type text}, {"IncomeGroup", type text}, {"ProtectionGap", type number}, {"RiskBand", type text}})
 				in Typed
