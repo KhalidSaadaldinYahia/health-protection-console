@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Select a country to trace coverage, household spending pressure, and the resulting protection gap.",
+                    "value": "Select a country to trace coverage, OOP financing share, and the exploratory difference.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "12pt",

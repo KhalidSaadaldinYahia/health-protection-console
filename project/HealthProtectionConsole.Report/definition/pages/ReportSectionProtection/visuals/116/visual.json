@@ -199,7 +199,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'COUNTRIES BY RISK BAND'"
+                  "Value": "'COUNTRIES BY INDICATOR QUADRANT'"
                 }
               }
             },

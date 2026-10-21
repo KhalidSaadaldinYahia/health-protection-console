@@ -199,7 +199,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'REGIONAL PROTECTION SCORE'"
+                  "Value": "'REGIONAL UHC MINUS OOP SHARE'"
                 }
               }
             },

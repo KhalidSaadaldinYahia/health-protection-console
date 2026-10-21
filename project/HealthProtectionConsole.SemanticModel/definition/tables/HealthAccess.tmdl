@@ -33,7 +33,7 @@ table HealthAccess
 		formatString: 0
 		lineageTag: 8bc7f2c0-cedf-4bde-9db4-fc90ccac17b5
 
-	measure 'Critical Countries' = CALCULATE(DISTINCTCOUNT(HealthAccess[Code]), HealthAccess[Year] = 2023, HealthAccess[RiskBand] = "Critical")
+	measure 'Critical Countries' = CALCULATE(DISTINCTCOUNT(HealthAccess[Code]), HealthAccess[Year] = 2023, HealthAccess[RiskBand] = "Lower UHC / higher OOP share")
 		formatString: 0
 		lineageTag: a938cf77-ff62-405f-b5be-8cdb16e9df9d
 

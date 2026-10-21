@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Every dot is one country. Move left for lower household cost burden; move up for stronger service coverage.",
+                    "value": "Every dot is one country. Move left for lower OOP share of health spending; move up for higher UHC service coverage.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11px",

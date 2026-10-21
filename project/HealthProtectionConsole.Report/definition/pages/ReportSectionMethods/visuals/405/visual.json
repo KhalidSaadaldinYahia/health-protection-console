@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "INTERPRETATION GUARDRAILS\n\n• Association is not causation.\n\n• The UHC index and OOP share measure different concepts and should not be interpreted as interchangeable.\n\n• National values conceal subnational and within-country inequality.\n\n• Reporting practices, revisions, and indicator availability vary by country and year.\n\n• The protection score is a portfolio analytical construct intended for comparison, not a policy target or clinical judgment.\n\nSOURCE URLS\ndata.worldbank.org/indicator/SH_UHC_SCI\ndata.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS",
+                    "value": "INTERPRETATION GUARDRAILS\n\n• Association is not causation.\n\n• The UHC index and OOP share measure different concepts and should not be interpreted as interchangeable.\n\n• National values conceal subnational and within-country inequality.\n\n• Reporting practices, revisions, and indicator availability vary by country and year.\n\n• The UHC-minus-OOP difference combines unlike indicators and is not a financial protection or household hardship measure.\n\nSOURCE URLS\ndata.worldbank.org/indicator/SH_UHC_SCI\ndata.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "13px",

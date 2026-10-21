@@ -216,7 +216,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'HIGHEST HOUSEHOLD COST BURDEN'"
+                  "Value": "'HIGHEST OOP SHARE OF HEALTH SPENDING'"
                 }
               }
             },

@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "WHAT THIS REPORT MEASURES\n\nUHC SERVICE COVERAGE INDEX\nWorld Bank indicator SH_UHC_SCI. Higher is better.\n\nOUT-OF-POCKET SHARE\nWorld Bank indicator SH.XPD.OOPC.CH.ZS. Lower is better.\n\nPROTECTION SCORE\nUHC index minus OOP share; a dashboard-created comparison signal, not an official indicator.\n\nRISK BANDS\nMore protected: UHC ≥60 and OOP <40. High cost: UHC ≥60 and OOP ≥40. Coverage gap: UHC <60 and OOP <40. Critical: UHC <60 and OOP ≥40.",
+                    "value": "WHAT THIS REPORT MEASURES\n\nUHC SERVICE COVERAGE INDEX\nWorld Bank indicator SH_UHC_SCI. Higher is stronger service coverage.\n\nOUT-OF-POCKET SHARE\nWorld Bank indicator SH.XPD.OOPC.CH.ZS. This is a share of current health expenditure, not a household hardship rate.\n\nUHC MINUS OOP SHARE\nUHC index minus OOP share; an exploratory arithmetic difference, not an official indicator or a hardship measure.\n\nINDICATOR QUADRANTS\nHigher UHC / lower OOP: UHC ≥60 and OOP <40. Higher UHC / higher OOP: UHC ≥60 and OOP ≥40. Lower UHC / lower OOP: UHC <60 and OOP <40. Lower UHC / higher OOP: UHC <60 and OOP ≥40. These describe indicator combinations, not household hardship.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "13px",

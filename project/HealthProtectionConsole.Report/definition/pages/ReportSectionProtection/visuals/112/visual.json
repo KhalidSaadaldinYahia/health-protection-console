@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "HealthAccess.Critical Countries",
-              "nativeQueryRef": "CRITICAL-RISK COUNTRIES"
+              "nativeQueryRef": "LOWER UHC / HIGHER OOP COUNTRIES"
             }
           ]
         }
@@ -180,7 +180,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CRITICAL-RISK COUNTRIES'"
+                  "Value": "'LOWER UHC / HIGHER OOP COUNTRIES'"
                 }
               }
             },

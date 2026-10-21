@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "HealthAccess.Latest Protection Score",
-              "nativeQueryRef": "PROTECTION SCORE"
+              "nativeQueryRef": "UHC MINUS OOP SHARE"
             }
           ]
         }
@@ -180,7 +180,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PROTECTION SCORE'"
+                  "Value": "'UHC MINUS OOP SHARE'"
                 }
               }
             },
