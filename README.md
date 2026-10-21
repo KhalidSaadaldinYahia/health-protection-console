@@ -13,11 +13,11 @@ These indicators describe service coverage and the financing mix. The out-of-poc
 
 ## Report pages
 
-### Protection Command
+### Coverage & Spending
 
 A matrix comparing the out-of-pocket share of health spending with service coverage. Each point represents one country; color identifies its indicator quadrant.
 
-### Regional Equity
+### Regional Comparison
 
 Regional and income-group comparisons of service coverage and out-of-pocket financing share.
 
@@ -67,7 +67,7 @@ These cutoffs are descriptive portfolio rules, not official World Bank or WHO cl
 
 ## Important limitations
 
-This dashboard is descriptive and does not establish causality. Country averages are not population weighted, missing indicator-years are excluded, and national results can conceal subnational inequality. The arithmetic `UHC index − OOP share` compares quantities with different definitions and is **not** a validated financial-protection score. Its numeric value must not be interpreted as household hardship, an outcome, or a policy target. The internal model retains its legacy measure and column identifiers to preserve report bindings; visible report labels and the prepared dataset use descriptive wording.
+This dashboard is descriptive and does not establish causality. Country averages are not population weighted, missing indicator-years are excluded, and national results can conceal subnational inequality. The arithmetic `UHC index − OOP share` compares quantities with different definitions and is **not** a validated financial-protection score. Its numeric value must not be interpreted as household hardship, an outcome, or a policy target. The internal model retains its legacy measure and column identifiers to preserve report bindings; interactive chart labels identify the arithmetic UHC-minus-OOP comparison as exploratory. It is a difference of unlike indicators, not a protection outcome.
 
 ## Author
 

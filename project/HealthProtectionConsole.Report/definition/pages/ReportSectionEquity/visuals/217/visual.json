@@ -46,7 +46,7 @@
                 }
               },
               "queryRef": "HealthAccess.Latest Protection Score",
-              "nativeQueryRef": "Latest Protection Score"
+              "nativeQueryRef": "UHC minus OOP share (exploratory)"
             }
           ]
         }
@@ -199,7 +199,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PROTECTION BY INCOME GROUP'"
+                  "Value": "'UHC–OOP PROFILE BY INCOME GROUP'"
                 }
               }
             },

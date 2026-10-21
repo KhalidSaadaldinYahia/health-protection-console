@@ -46,7 +46,7 @@
                 }
               },
               "queryRef": "HealthAccess.Latest Protection Score",
-              "nativeQueryRef": "Latest Protection Score"
+              "nativeQueryRef": "UHC minus OOP share (exploratory)"
             }
           ]
         }
