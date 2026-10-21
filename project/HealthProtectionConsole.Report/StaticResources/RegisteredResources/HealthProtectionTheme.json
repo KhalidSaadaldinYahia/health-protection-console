@@ -1,0 +1,32 @@
+{
+  "name": "HealthProtectionTheme.json",
+  "dataColors": [
+    "#3FE0D0",
+    "#F2C14E",
+    "#F77F6B",
+    "#5AA9E6",
+    "#B28DFF",
+    "#7BC47F"
+  ],
+  "background": "#061A21",
+  "foreground": "#EAF5F5",
+  "tableAccent": "#F2C14E",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#EAF5F5"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#DCECEF"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#AFC7C9"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F2C14E"
+    }
+  }
+}

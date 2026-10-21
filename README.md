@@ -51,14 +51,6 @@ Source pages:
 
 These cutoffs are transparent portfolio rules, not official World Bank or WHO classifications.
 
-## How to open
-
-1. [Download the Power BI project archive](Health_Protection_Console_Power_BI_Project.rar).
-2. Extract the archive.
-3. Open `HealthProtectionConsole.pbip` in Power BI Desktop.
-4. If prompted, set the `DataFolder` parameter to the extracted project's `data` folder and refresh.
-
-Preview the completed dashboard: [open the PDF](Health_Protection_Console_Dashboard.pdf).
 
 ## Technical features
 
@@ -79,3 +71,12 @@ This dashboard is descriptive and does not establish causality. Country averages
 
 **Khalid SaadAldin Yahia**  
 Data Analyst | Power BI | Python | SQL | Excel
+
+## Open and inspect the report
+
+- [Preview the dashboard PDF](Health_Protection_Console_Dashboard.pdf). A PDF is a static export; the `.pbip` project contains the interactive report.
+- [Browse the Power BI project](project/) or [download this repository as a ZIP](https://github.com/KhalidSaadaldinYahia/health-protection-console/archive/refs/heads/main.zip). Keep the `project` folder intact after extracting.
+- Open [`HealthProtectionConsole.pbip`](project/HealthProtectionConsole.pbip) from the extracted `project` folder in a recent Power BI Desktop. The `.pbip` file references its sibling `.Report` and `.SemanticModel` folders; it cannot open by itself after downloading only that file.
+- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository's public `main` branch. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
+
+The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.

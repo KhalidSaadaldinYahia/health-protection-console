@@ -1,0 +1,104 @@
+table HealthAccess
+	lineageTag: f5959ffe-f8c9-40c2-8bb3-457c48c117ed
+
+	measure 'UHC Coverage' = AVERAGE(HealthAccess[UHC])
+		formatString: 0.0
+		lineageTag: 864bbb96-3fc6-48b6-8764-15b795b02654
+
+	measure 'Out-of-Pocket Burden' = AVERAGE(HealthAccess[OOP])
+		formatString: 0.0
+		lineageTag: 192fbb33-0ba5-42ec-b352-6c7c984c8e91
+
+	measure 'Protection Gap' = AVERAGE(HealthAccess[ProtectionGap])
+		formatString: 0.0
+		lineageTag: 852f9b28-8cd1-4b4d-8618-ff416a942d67
+
+	measure 'Protection Score' = [UHC Coverage] - [Out-of-Pocket Burden]
+		formatString: 0.0
+		lineageTag: 605d99e7-d9cc-4b3a-9d1f-3f4b4d84c99d
+
+	measure 'Latest UHC' = CALCULATE([UHC Coverage], HealthAccess[Year] = 2023)
+		formatString: 0.0
+		lineageTag: 0575fda5-5cd5-4286-b3a7-3c765d74bc41
+
+	measure 'Latest OOP' = CALCULATE([Out-of-Pocket Burden], HealthAccess[Year] = 2023)
+		formatString: 0.0
+		lineageTag: fffc04a2-0e54-402f-a3d3-f9bece817a77
+
+	measure 'Latest Protection Score' = CALCULATE([Protection Score], HealthAccess[Year] = 2023)
+		formatString: 0.0
+		lineageTag: 11dd5a2b-fa4c-4785-8684-c8bdcdf17c4d
+
+	measure 'Countries Tracked' = CALCULATE(DISTINCTCOUNT(HealthAccess[Code]), HealthAccess[Year] = 2023)
+		formatString: 0
+		lineageTag: 8bc7f2c0-cedf-4bde-9db4-fc90ccac17b5
+
+	measure 'Critical Countries' = CALCULATE(DISTINCTCOUNT(HealthAccess[Code]), HealthAccess[Year] = 2023, HealthAccess[RiskBand] = "Critical")
+		formatString: 0
+		lineageTag: a938cf77-ff62-405f-b5be-8cdb16e9df9d
+
+	measure 'Latest Year' = MAX(HealthAccess[Year])
+		formatString: 0
+		lineageTag: 39511aa4-de03-43ef-bd98-da189b45252a
+
+	column Country
+		dataType: string
+		lineageTag: 6413870e-652c-4764-a1c4-4da2b58f0b31
+		sourceColumn: Country
+
+	column Code
+		dataType: string
+		lineageTag: 8eef8e80-26c5-4f77-bcad-bc74d3ec20ba
+		sourceColumn: Code
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e99d8661-d785-4e97-b8e2-eb05b1ee87a9
+		summarizeBy: none
+		sourceColumn: Year
+
+	column OOP
+		dataType: double
+		formatString: 0.0
+		lineageTag: 9d6e27c0-654f-46f3-8da0-4aa49d60519d
+		summarizeBy: average
+		sourceColumn: OOP
+
+	column UHC
+		dataType: double
+		formatString: 0.0
+		lineageTag: 78433886-b624-4585-8960-de88b0ed8fac
+		summarizeBy: average
+		sourceColumn: UHC
+
+	column Region
+		dataType: string
+		lineageTag: d2e5c896-ce61-414e-a072-837d40c010f6
+		sourceColumn: Region
+
+	column IncomeGroup
+		dataType: string
+		lineageTag: 7e6451af-8546-4bab-b436-58aa1fa7fc39
+		sourceColumn: IncomeGroup
+
+	column ProtectionGap
+		dataType: double
+		formatString: 0.0
+		lineageTag: c40f3cd6-0104-4bac-a548-d59af2e8e206
+		summarizeBy: average
+		sourceColumn: ProtectionGap
+
+	column RiskBand
+		dataType: string
+		lineageTag: edca11c0-fcd0-4fd9-9296-a35e43b06116
+		sourceColumn: RiskBand
+
+	partition HealthAccess = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/KhalidSaadaldinYahia/health-protection-console/main/project/data/health_access.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"Country", type text}, {"Code", type text}, {"Year", Int64.Type}, {"OOP", type number}, {"UHC", type number}, {"Region", type text}, {"IncomeGroup", type text}, {"ProtectionGap", type number}, {"RiskBand", type text}})
+				in Typed
