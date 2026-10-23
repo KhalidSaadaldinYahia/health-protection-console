@@ -1,5 +1,9 @@
 # Health Protection Console
 
+## Download the complete project
+
+**To open this project:** [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/health-protection-console/archive/refs/heads/main.zip), extract it, and open `project/HealthProtectionConsole.pbip` in Power BI Desktop. Keep the `.Report`, `.SemanticModel`, and `data` folders beside the `.pbip` file. **Downloading the `.pbip` file alone will not produce a working report.** The included CSVs are the inspectable data snapshot; the model refreshes from a fixed online copy of those CSVs by default. The PDF is a static preview.
+
 An interactive Power BI dashboard comparing universal health coverage with the share of health expenditure paid out of pocket.
 
 ## Dashboard purpose
