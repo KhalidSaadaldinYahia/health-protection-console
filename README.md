@@ -1,8 +1,11 @@
 # Health Protection Console
 
-## Open the interactive dashboard
+## Files
 
-**Recommended:** [download HealthProtectionConsole.pbix](HealthProtectionConsole.pbix) and open it in a recent Power BI Desktop. The PBIX contains the report and its embedded data model, so you only need this one file to explore the saved dashboard. For reproducible source files and the included CSV snapshot, [download the complete repository ZIP](https://github.com/KhalidSaadaldinYahia/health-protection-console/archive/refs/heads/main.zip), extract it, and open `project/HealthProtectionConsole.pbip` with its sibling `.Report`, `.SemanticModel`, and `data` folders intact. The PDF below is a static preview. A data refresh may require network access to the documented source snapshot.
+- [Open the Power BI dashboard](HealthProtectionConsole.pbix) in Power BI Desktop.
+- [Read the PDF analytical preview](Health_Protection_Console_Dashboard.pdf). This PDF summarises independently checked figures; it is not yet a page-for-page export of the PBIX. A matching PDF export is pending verification in Power BI Desktop.
+
+The PBIX is the single-file dashboard. A data refresh may need network access to its saved source URLs.
 
 ## Dashboard purpose
 
@@ -39,7 +42,7 @@ Definitions, source information, analytical assumptions, limitations, and interp
 - **Prepared dataset:** 4,529 complete country-year observations across 192 countries
 - **Latest snapshot:** 191 countries in 2023
 
-The included [`project/data/health_access.csv`](project/data/health_access.csv) is the analytical snapshot. It is a country-year inner join of available values for both indicators, excluding years missing either value. Region and income group are contextual labels in the prepared file. The exact original API request URLs, extraction date, and transformation script were not retained, so the source pages identify the indicators but cannot reproduce the exact historical snapshot byte for byte.
+The prepared data used for the PBIX is the analytical snapshot. It is a country-year inner join of available values for both indicators, excluding years missing either value. Region and income group are contextual labels in the prepared file. The exact original API request URLs, extraction date, and transformation script were not retained, so the source pages identify the indicators but cannot reproduce the exact historical snapshot byte for byte.
 
 Source pages:
 
@@ -58,7 +61,7 @@ These cutoffs are descriptive portfolio rules, not official World Bank or WHO cl
 
 ## Technical features
 
-- Power BI Project (`.pbip`) format
+- Power BI Desktop (`.pbix`) report and semantic model
 - PBIR report definition
 - TMDL semantic model
 - Power Query CSV import
@@ -75,16 +78,3 @@ This dashboard is descriptive and does not establish causality. Country averages
 
 **Khalid SaadAldin Yahia**  
 Data Analyst | Power BI | Python | SQL | Excel
-
-## Open and inspect the report
-
-- [Preview the dashboard PDF](Health_Protection_Console_Dashboard.pdf). This PDF is a newly calculated, source-backed data preview; the `.pbip` project contains the interactive report.
-- [Browse the Power BI project](project/) or [download this repository as a ZIP](https://github.com/KhalidSaadaldinYahia/health-protection-console/archive/refs/heads/main.zip). Keep the `project` folder intact after extracting.
-- Open [`HealthProtectionConsole.pbip`](project/HealthProtectionConsole.pbip) from the extracted `project` folder in a recent Power BI Desktop. The `.pbip` file references its sibling `.Report` and `.SemanticModel` folders; it cannot open by itself after downloading only that file.
-- On refresh, choose **Anonymous** access if Power BI requests credentials for `raw.githubusercontent.com`. The project reads the included CSV snapshot from this repository at fixed commit `18313664b769`. For offline refresh, replace each table query's `Web.Contents(...)` CSV source with `File.Contents(...)` pointing to its included local `project/data` CSV.
-
-The CSV data snapshots are included under [`project/data`](project/data/). A `.pbix` was not generated because the PBIP source cannot be converted faithfully without opening and saving it in Power BI Desktop.
-
-### Reproducible data snapshot
-
-The semantic model reads CSV files from immutable commit `18313664b769d22530c3e00045ea2eaae97b94ec`. The same files are included in `project/data/` for inspection. Refreshing this project will not silently switch to a later `main` branch snapshot. To analyze newer data, update the CSV and source URL together and revalidate the measures and preview.
